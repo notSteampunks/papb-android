@@ -23,6 +23,10 @@ public class SimpleFragment extends Fragment {
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
 
+    private static final int YES = 0;
+    private static final int NO = 1;
+
+
     // TODO: Rename and change types of parameters
     private String mParam1;
     private String mParam2;
@@ -79,7 +83,7 @@ public class SimpleFragment extends Fragment {
                 RadioButton checkedButton = radioGroup.findViewById(i);
                 int idx = radioGroup.indexOfChild(checkedButton);
 
-                if (idx == 0){
+                if (idx == YES){
                     questionTextView.setText(R.string.yes_message);
                 }
                 else {
